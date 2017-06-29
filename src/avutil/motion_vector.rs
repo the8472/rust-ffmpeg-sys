@@ -1,4 +1,4 @@
-use libc::{uint8_t, int16_t, int32_t, uint64_t};
+use libc::{uint8_t, int16_t, int32_t, uint64_t, uint16_t};
 
 #[derive(Debug)]
 #[repr(C)]
@@ -15,4 +15,8 @@ pub struct AVMotionVector {
 	pub dst_y: int16_t,
 
 	pub flags: uint64_t,
+
+	pub motion_x: int32_t,
+	pub motion_y: int32_t,
+	pub motion_scale: uint16_t
 }
